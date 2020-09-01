@@ -1,0 +1,40 @@
+version: '3.1'
+
+services:
+  re0:
+    image: zk_oracle:lastest
+    hostname: re0
+    ports:
+      - 2181:2181
+    environment:
+      ZOO_MY_ID: 1
+      ORACLE_PATH: /chassis/mastership
+      ZOO_SERVERS: server.1=re0:2888:3888;2181 server.2=re1:2888:3888;2181 server.3=re2:2888:3888;2181
+    volumes:       
+    - /Users/ccl/Library/Mobile Documents/com~apple~CloudDocs/Documents/SJSU-Research/implement/docker/re0:/chassis/
+    - /Users/ccl/Library/Mobile Documents/com~apple~CloudDocs/Documents/SJSU-Research/implement/zookeeper:/apache-zookeeper-3.6.1-bin/
+  re1:
+    image: zk_oracle:lastest
+    hostname: re1
+    ports:
+      - 2182:2181
+    environment:
+      ZOO_MY_ID: 2
+      ORACLE_PATH: /chassis/mastership
+      ZOO_SERVERS: server.1=re0:2888:3888;2181 server.2=re1:2888:3888;2181 server.3=re2:2888:3888;2181
+    volumes:
+      - /Users/ccl/Library/Mobile Documents/com~apple~CloudDocs/Documents/SJSU-Research/implement/docker/re1:/chassis/
+      - /Users/ccl/Library/Mobile Documents/com~apple~CloudDocs/Documents/SJSU-Research/implement/zookeeper:/apache-zookeeper-3.6.1-bin/
+  re2:
+    image: zk_oracle:lastest
+    hostname: re2
+    ports:
+      - 2183:2181
+    environment:
+      ZOO_MY_ID: 3
+      ORACLE_PATH: /chassis/mastership
+      ZOO_SERVERS: server.1=re0:2888:3888;2181 server.2=re1:2888:3888;2181 server.3=re2:2888:3888;2181
+    volumes:
+      - /Users/ccl/Library/Mobile Documents/com~apple~CloudDocs/Documents/SJSU-Research/implement/docker/re2:/chassis/
+      - /Users/ccl/Library/Mobile Documents/com~apple~CloudDocs/Documents/SJSU-Research/implement/zookeeper:/apache-zookeeper-3.6.1-bin/
+
