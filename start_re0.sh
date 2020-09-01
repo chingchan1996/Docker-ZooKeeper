@@ -1,15 +1,15 @@
 # /bin/bash
 
-docker start docker_re0_1
+docker start docker_hw0_1
 
-mastership=`cat ./re1/mastership`
+mastership=`cat ./hw1/mastership`
 
 if [ $mastership = '1' ]
 then 
-    echo "0" > "./re0/mastership"
+    echo "0" > "./hw0/mastership"
 fi
 
-echo "re0: "
-echo `cat ./re0/mastership`
-echo "re1: "
-echo `cat ./re1/mastership`
+echo "hw0: "
+echo `cat ./hw0/mastership`
+echo "hw1: "
+echo `cat ./hw1/mastership`

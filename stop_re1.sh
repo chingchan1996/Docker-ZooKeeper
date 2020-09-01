@@ -1,16 +1,16 @@
 # /bin/bash
 
-docker kill docker_re1_1
+docker kill docker_hw1_1
 
-mastership=`cat ./re1/mastership`
+mastership=`cat ./hw1/mastership`
 
 if [ $mastership = '1' ]
 then 
-    echo "1" > "./re0/mastership"
-    echo "0" > "./re1/mastership"
+    echo "1" > "./hw0/mastership"
+    echo "0" > "./hw1/mastership"
 fi
 
-echo "re0: "
-echo `cat ./re0/mastership`
-echo "re1: "
-echo `cat ./re1/mastership`
+echo "hw0: "
+echo `cat ./hw0/mastership`
+echo "hw1: "
+echo `cat ./hw1/mastership`
