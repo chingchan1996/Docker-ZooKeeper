@@ -1,0 +1,1 @@
+docker run -it --network=docker_default  --name zk_client -v /Users/ccl/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/SJSU-Research/implement/zk_cli/out/artifacts/zk_cli_jar:/jar/ openjdk:8
