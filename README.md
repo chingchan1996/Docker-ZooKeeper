@@ -30,7 +30,7 @@ __mastership__ is a text file contains only either 0 or 1. You could easily crea
 If you are using the oracle, you need to also provide the oracle files, so you should get something like this:
 
     volumes:       
-    - /some/path/docker/re0:/chassis/
+    - /some/path/docker/hw0:/chassis/
 
 Please replace __YOUR_ZOOKEEPER_REPO__ with the one on your host machine.
 For example, if you have a ZooKeeper binaries on /some/path/
